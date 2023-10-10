@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pardal Online</h1>
+    <p>Velocidade do Carro: <input type="number" name="txtvel" id="txtvel">Km/h
+    <input type="button" value="Verificar" onclick="calcular()"></p>
+    <div id="res">
+
+    </div>
+    
+    <script>
+    
+        function calcular(){
+            var txtv = document.querySelector('input#txtvel')
+            var vel = Number(txtv.value)
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Seu carro ta em <strong>${vel} Km/h</strong></p>`
+            if (vel>90){
+                res.innerHTML += `<p>Passou a ${vel} <strong>MULTA</strong>.</p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com sinto</p>`
+        }
+
+    </script>
+</body>
+</html>
