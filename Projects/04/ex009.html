@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
+    <h1>Estrangeiro?</h1>
+    <p>Coloque pais: <input type="text" name="txtpais" id="txtpais"> <input type="button" value="Analisar" onclick="analise()" > </p>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function analise(){
+            var a = document.querySelector('input#txtpais')
+            var pais = String(a.value)
+            var res = document.querySelector('div#res')
+
+            res.innerHTML = `<p>Eu sou Brasileiro e vc morando em ${pais}</p>`    
+
+            if (pais == 'Brasil'){
+                res.innerHTML += '<p>Que interessante, estamos por perto!</p>'
+            }else{
+                res.innerHTML += ' <p>Tenho vontade de conhecer...</p>'
+            }
+        }
+
+    </script>
+</body>
+</html>
